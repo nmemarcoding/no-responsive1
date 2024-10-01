@@ -1,0 +1,166 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #005599;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #004080;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #e4e4e4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    background-color: #dee3e7;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+    color: #005599;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #005599;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Breakpoints */
+
+/* Small screens (640px or less) */
+@media (max-width: 640px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .content, .sidebar {
+        margin-right: 0;
+    }
+}
+
+/* Medium screens (641px to 1007px) */
+@media (min-width: 641px) and (max-width: 1007px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content, .sidebar {
+        margin-bottom: 20px;
+    }
+}
+
+/* Large screens (1008px or greater) */
+@media (min-width: 1008px) {
+    header nav ul {
+        justify-content: space-between;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .content {
+        margin-right: 20px;
+    }
+}
